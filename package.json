@@ -1,0 +1,24 @@
+{
+  "name": "athome",
+  "version": "0.1.0",
+  "description": "Keyboard layout that keeps you on the home row",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgogstad/athome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgogstad/athome/issues"
+  },
+  "homepage": "https://github.com/jgogstad/athome#readme",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "yamljs": "^0.3.0"
+  }
+}

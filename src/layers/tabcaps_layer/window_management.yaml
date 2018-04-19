@@ -1,0 +1,38 @@
+description: TabCaps Layer: Window Management
+manipulators:
+  - type: basic
+    description: TotalSpaces: Left (with window)
+    from:
+      key_code: h
+    to:
+      - key_code: left_arrow
+        modifiers:
+          - left_control
+          - left_shift
+  - type: basic
+    description: TotalSpaces: Right (with window)
+    from:
+      key_code: l
+    to:
+      - key_code: right_arrow
+        modifiers:
+          - left_control
+          - left_shift
+  - type: basic
+    description: TotalSpaces: Up (with window)
+    from:
+      key_code: k
+    to:
+      - key_code: up_arrow
+        modifiers:
+          - left_control
+          - left_shift
+  - type: basic
+    description: TotalSpaces: Down (with window)
+    from:
+      key_code: j
+    to:
+      - key_code: down_arrow
+        modifiers:
+          - left_control
+          - left_shift
