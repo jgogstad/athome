@@ -1,0 +1,184 @@
+{
+  "description": "Hyper Application",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "y",
+        "modifiers": {
+          "mandatory": [
+            "left_command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'Typora'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "y",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'OmniOutliner'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "t"
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'iTerm'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "t",
+        "modifiers": {
+          "mandatory": [
+            "left_command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'Terminal'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "y",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'Typora'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "f",
+        "modifiers": {
+          "mandatory": [
+            "left_command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'SnippetsLab'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "f",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'Dictionary'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "g"
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'IntelliJ IDEA CE'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "g",
+        "modifiers": {
+          "mandatory": [
+            "left_command"
+          ]
+        }
+      },
+      "to": [
+        {
+          "shell_command": "open -a 'Google Chrome'"
+        }
+      ],
+      "conditions": [{
+        "type": "variable_if",
+        "name": "caps_lock pressed",
+        "value": 1
+      }]
+    }
+  ]
+}
