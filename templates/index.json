@@ -6,5 +6,7 @@
   "manual": "https://github.com/jgogstad/athome",
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/jgogstad/athome/master/foo.json",
   "rules": [
+    {% include './caps_layer/index.json' %},
+    {% include './tab_layer/index.json' %},
   ]
 }

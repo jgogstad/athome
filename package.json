@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jgogstad/athome#readme",
   "dependencies": {
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "yamljs": "^0.3.0"
   }
 }

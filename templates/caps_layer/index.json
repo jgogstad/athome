@@ -1,0 +1,17 @@
+[
+  {% include "./layer_definition.json" %},
+  {% include "./navigation.json" %},
+  {% include "./internationalization/norway.json" %},
+  {% include "./applications.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+  {% include "./navigation.json" %},
+]
