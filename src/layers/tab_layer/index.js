@@ -12,8 +12,11 @@ const templates = [{
     }
 ]
 
-const layerDefinition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))
+const definition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))
 
-module.exports = [layerDefinition].concat(
+module.exports = {
+definition,
+rules: [definition].concat(
     utils.merge(templates.map(t => ({ ...t, condition })))
 )
+}

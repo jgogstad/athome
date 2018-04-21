@@ -10,4 +10,6 @@ const templates = [{
     rule: YAML.load(path.join(__dirname, '/intellij.yaml'))
 }]
 
-module.exports = utils.merge(templates)
+module.exports = {
+rules: utils.merge(templates)
+}
