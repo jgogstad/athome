@@ -1,0 +1,17 @@
+description: 'Support wheels'
+manipulators:
+  - type: basic
+    description: 'Disable Cmd+H'
+    from:
+      key_code: h
+      modifiers:
+        mandatory:
+          - left_command
+        optional:
+          - left_option
+    to:
+      - key_code: left_arrow
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 0

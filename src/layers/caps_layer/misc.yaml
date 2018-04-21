@@ -1,0 +1,27 @@
+description: Misc caps layer keys
+manipulators:
+  - type: basic
+    description: Screenshot on grave accent
+    from:
+      key_code: grave_accent_and_tilde
+      modifiers:
+        mandatory:
+          - left_command
+    to:
+      - key_code: '4'
+        modifiers:
+          - left_shift
+          - left_command
+  - type: basic
+    description: Screenshot on grave accent
+    from:
+      key_code: grave_accent_and_tilde
+      modifiers:
+        optional:
+          - any
+    to:
+      - key_code: '4'
+        modifiers:
+          - left_control
+          - left_shift
+          - left_command

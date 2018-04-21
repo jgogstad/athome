@@ -1,0 +1,68 @@
+description: 'Caps-Layer Application Launchers'
+manipulators:
+  - type: basic
+    from:
+      key_code: y
+      modifiers:
+        mandatory:
+          - left_command
+    to:
+      - shell_command: 'open -a ''Typora'''
+  - type: basic
+    from:
+      key_code: y
+      modifiers:
+        optional:
+          - any
+    to:
+      - shell_command: 'open -a ''OmniOutliner'''
+  - type: basic
+    from:
+      key_code: t
+    to:
+      - shell_command: 'open -a ''iTerm'''
+  - type: basic
+    from:
+      key_code: t
+      modifiers:
+        mandatory:
+          - left_command
+    to:
+      - shell_command: 'open -a ''Terminal'''
+  - type: basic
+    from:
+      key_code: y
+      modifiers:
+        optional:
+          - any
+    to:
+      - shell_command: 'open -a ''Typora'''
+  - type: basic
+    from:
+      key_code: f
+      modifiers:
+        mandatory:
+          - left_command
+    to:
+      - shell_command: 'open -a ''SnippetsLab'''
+  - type: basic
+    from:
+      key_code: f
+      modifiers:
+        optional:
+          - any
+    to:
+      - shell_command: 'open -a ''Dictionary'''
+  - type: basic
+    from:
+      key_code: g
+    to:
+      - shell_command: 'open -a ''IntelliJ IDEA CE'''
+  - type: basic
+    from:
+      key_code: g
+      modifiers:
+        mandatory:
+          - left_command
+    to:
+      - shell_command: 'open -a ''Google Chrome'''

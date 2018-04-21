@@ -1,0 +1,35 @@
+description: 'Internationalization: Norwegian'
+manipulators:
+  - type: basic
+    description: "Ø"
+    from:
+      key_code: semicolon
+      modifiers:
+        optional:
+          - left_shift
+    to:
+      - key_code: o
+        modifiers:
+          - left_option
+  - type: basic
+    description: "Æ"
+    from:
+      key_code: quote
+      modifiers:
+        optional:
+          - left_shift
+    to:
+      - key_code: quote
+        modifiers:
+          - left_option
+  - type: basic
+    description: "Å"
+    from:
+      key_code: open_bracket
+      modifiers:
+        optional:
+          - left_shift
+    to:
+      - key_code: a
+        modifiers:
+          - left_option
