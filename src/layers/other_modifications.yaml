@@ -1,0 +1,8 @@
+description: Other
+manipulators:
+  - type: basic
+    description: Right shift to Left control
+    from:
+      key_code: right_shift
+    to:
+      - key_code: left_control
