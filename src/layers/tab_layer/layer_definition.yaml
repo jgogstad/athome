@@ -1,4 +1,4 @@
-description: 'Tab layer'
+description: Tab layer definition
 manipulators:
   - type: basic
     description: Make Cmd+Tab work as usual
