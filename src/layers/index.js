@@ -10,10 +10,10 @@ module.exports = {
     "manual": "https://github.com/jgogstad/athome",
     "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/jgogstad/athome/master/foo.json",
     "rules": [
-    capsLayer.definition,
-    tabLayer.definition,
-    ...applicationLayers.rules,
-    ...capsLayer.rules,
-    ...tabLayer.rules
+        capsLayer.definition,
+        tabLayer.definition,
+        ...applicationLayers.rules,
+        ...capsLayer.rules,
+        ...tabLayer.rules
     ]
 }

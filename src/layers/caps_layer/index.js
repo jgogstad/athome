@@ -14,6 +14,9 @@ const templates = [{
         rule: YAML.load(path.join(__dirname, '/deletion.yaml'))
     },
     {
+        rule: YAML.load(path.join(__dirname, '/internationalization/norway.yaml'))
+    },
+    {
         rule: YAML.load(path.join(__dirname, '/application_launchers.yaml'))
     },
     {
@@ -27,8 +30,6 @@ const templates = [{
 const definition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))
 
 module.exports = {
-definition,
-rules: [exports.definition].concat(
-    utils.merge(templates.map(t => ({ ...t, condition })))
-)
+    definition,
+    rules: utils.merge(templates.map(t => ({ ...t, condition })))
 }

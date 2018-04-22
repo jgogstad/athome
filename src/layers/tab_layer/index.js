@@ -7,16 +7,14 @@ const condition = {
     "name": "tab pressed",
     "value": 1
 }
+
 const templates = [{
-        rule: YAML.load(path.join(__dirname, '/functional.yaml'))
-    }
-]
+    rule: YAML.load(path.join(__dirname, '/functional.yaml'))
+}]
 
 const definition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))
 
 module.exports = {
-definition,
-rules: [definition].concat(
-    utils.merge(templates.map(t => ({ ...t, condition })))
-)
+    definition,
+    rules: utils.merge(templates.map(t => ({ ...t, condition })))
 }

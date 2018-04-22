@@ -1,4 +1,4 @@
-description: 'Hyper IntelliJ'
+description: 'Application Layer: IntelliJ'
 manipulators:
   - type: basic
     from:

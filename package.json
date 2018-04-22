@@ -4,7 +4,7 @@
   "description": "Keyboard layout that keeps you on the home row",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/jgogstad/athome#readme",
   "dependencies": {
-    "swig": "^1.4.2",
+    "chalk": "^2.4.0",
     "yamljs": "^0.3.0"
   }
 }

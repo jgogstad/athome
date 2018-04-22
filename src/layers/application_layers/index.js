@@ -11,5 +11,5 @@ const templates = [{
 }]
 
 module.exports = {
-rules: utils.merge(templates)
+    rules: utils.merge(templates)
 }
