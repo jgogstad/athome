@@ -1,0 +1,19 @@
+description: TabCaps layer definition
+manipulators:
+  - type: basic
+    description: Enable TabCaps layer on hold both Tab and Tab
+    from:
+      simultaneous:
+        - key_code: tab
+        - key_code: caps_lock
+      modifiers:
+        optional:
+          - any
+    to:
+      - set_variable:
+          name: 'tabcaps pressed'
+          value: 1
+    to_after_key_up:
+      - set_variable:
+          name: 'tabcaps pressed'
+          value: 0

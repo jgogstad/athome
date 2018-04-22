@@ -32,7 +32,7 @@ manipulators:
           value: 0
     to_if_alone:
       - key_code: tab
-    conditions:
+    conditions: # Make Caps-Tab still work as Cmd-Tab
       - type: variable_unless
         name: 'caps_lock pressed'
         value: 1

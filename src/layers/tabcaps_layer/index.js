@@ -4,12 +4,11 @@ const utils = require('../../common/utils')
 
 const condition = {
     "type": "variable_if",
-    "name": "tab pressed",
+    "name": "tabcaps pressed",
     "value": 1
 }
 
 const templates = [
-  { rule: YAML.load(path.join(__dirname, '/functional.yaml')) },
   { rule: YAML.load(path.join(__dirname, '/window_management.yaml')) },
 ]
 

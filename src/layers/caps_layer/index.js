@@ -7,24 +7,13 @@ const condition = {
     "name": "caps_lock pressed",
     "value": 1
 }
-const templates = [{
-        rule: YAML.load(path.join(__dirname, '/navigation.yaml'))
-    },
-    {
-        rule: YAML.load(path.join(__dirname, '/deletion.yaml'))
-    },
-    {
-        rule: YAML.load(path.join(__dirname, '/internationalization/norway.yaml'))
-    },
-    {
-        rule: YAML.load(path.join(__dirname, '/application_launchers.yaml'))
-    },
-    {
-        rule: YAML.load(path.join(__dirname, '/misc.yaml'))
-    },
-    {
-        rule: YAML.load(path.join(__dirname, '/window_control.yaml'))
-    }
+const templates = [
+  { rule: YAML.load(path.join(__dirname, '/navigation.yaml')) },
+  { rule: YAML.load(path.join(__dirname, '/deletion.yaml')) },
+  { rule: YAML.load(path.join(__dirname, '/internationalization/norway.yaml')) },
+  { rule: YAML.load(path.join(__dirname, '/application_launchers.yaml')) },
+  { rule: YAML.load(path.join(__dirname, '/misc.yaml')) },
+  { rule: YAML.load(path.join(__dirname, '/window_control.yaml')) }
 ]
 
 const definition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))

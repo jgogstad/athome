@@ -1,0 +1,11 @@
+description: Disable keys unavailable on Happy Hacker keyboard
+manipulators:
+  - type: basic
+    description: Disable left control
+    from:
+      key_code: left_control
+      modifiers:
+        optional:
+          - any
+    to:
+      - shell_command: osascript -e 'set d to "Disabled"' -e 'display dialog d with icon caution'
