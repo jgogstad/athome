@@ -1,6 +1,12 @@
 description: 'Caps-Layer: Deletion'
 manipulators:
   - type: basic
+    description: Caps-Backspace to delete
+    from:
+      key_code: delete_or_backspace
+    to:
+      - key_code: delete_forward
+  - type: basic
     from:
       key_code: n
       modifiers:
