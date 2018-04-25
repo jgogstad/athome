@@ -31,7 +31,7 @@ manipulators:
         optional:
           - any
     to:
-      - shell_command: f4
+      - key_code: f4
   - type: basic
     from:
       key_code: '5'
