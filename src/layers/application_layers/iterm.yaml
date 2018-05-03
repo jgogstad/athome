@@ -1,0 +1,101 @@
+description: 'Application Layer: iTerm 2'
+manipulators:
+  - type: basic
+    from:
+      key_code: a
+    to:
+      - key_code: a
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: c
+    to:
+      - key_code: c
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: e
+    to:
+      - key_code: e
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: d
+    to:
+      - key_code: d
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: r
+    to:
+      - key_code: r
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: s
+    to:
+      - key_code: s
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: u
+    to:
+      - key_code: u
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: w
+    to:
+      - key_code: w
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
+  - type: basic
+    from:
+      key_code: z
+    to:
+      - key_code: z
+        modifiers:
+          - left_control
+    conditions:
+      - type: variable_if
+        name: 'caps_lock pressed'
+        value: 1
