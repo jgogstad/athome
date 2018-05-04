@@ -1,4 +1,4 @@
-description: 'Support wheels'
+description: Training wheels
 manipulators:
   - type: basic
     description: 'Disable Cmd+H'
