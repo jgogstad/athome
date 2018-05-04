@@ -1,13 +1,13 @@
 const merge = (conditionAndRules) => conditionAndRules.map(({
-    condition,
+    conditions,
     rule
 }) => ({
     ...rule,
     manipulators: rule.manipulators.map(m => { // Override manipulators array with the same array + layer condition
         if (m.conditions) {
-            m.conditions.push(condition)
+            m.conditions = m.conditions.concat(conditions)
         } else {
-            m.conditions = [condition]
+            m.conditions = conditions
         }
         return m
     })

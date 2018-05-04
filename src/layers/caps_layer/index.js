@@ -2,11 +2,12 @@ const YAML = require('yamljs')
 const path = require('path')
 const utils = require('../../common/utils')
 
-const condition = {
+const conditions = [{
     "type": "variable_if",
     "name": "caps_lock pressed",
     "value": 1
-}
+}]
+
 const templates = [
   { rule: YAML.load(path.join(__dirname, '/navigation.yaml')) },
   { rule: YAML.load(path.join(__dirname, '/deletion.yaml')) },
@@ -20,6 +21,7 @@ const templates = [
 const definition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))
 
 module.exports = {
+    conditions,
     definition,
-    rules: utils.merge(templates.map(t => ({ ...t, condition })))
+    rules: utils.merge(templates.map(t => ({ ...t, conditions })))
 }
