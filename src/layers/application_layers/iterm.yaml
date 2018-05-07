@@ -23,6 +23,13 @@ manipulators:
           - left_control
   - type: basic
     from:
+      key_code: f
+    to:
+      - key_code: f
+        modifiers:
+          - left_control
+  - type: basic
+    from:
       key_code: d
     to:
       - key_code: d
