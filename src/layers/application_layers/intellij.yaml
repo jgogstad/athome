@@ -63,7 +63,7 @@ manipulators:
           - left_command
           - left_option
   - type: basic
-    description: Caps+Enter to Shift+Enter
+    description: Caps+Enter to Control+Enter
     from:
       key_code: return_or_enter
       modifiers:
@@ -71,7 +71,7 @@ manipulators:
           - any
     to:
       - key_code: return_or_enter
-        modifiers: left_shift
+        modifiers: left_control
     conditions:
       - type: variable_if
         name: 'caps_lock pressed'
