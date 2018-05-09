@@ -1,7 +1,7 @@
-const YAML = require('yamljs')
 const path = require('path')
 const utils = require('../../common/utils')
 const capsLayer = require('../caps_layer')
+const Utils = require('../../common/utils')
 
 // To find the bundle identifier for your application, run
 // `mdls -name kMDItemCFBundleIdentifier /Applications/YourApp.app`
@@ -13,7 +13,7 @@ const templates = [
                 bundle_identifiers: ['^com\\.jetbrains\\.intellij.*']
             }
         ],
-        rule: YAML.load(path.join(__dirname, '/intellij.yaml'))
+        rule: Utils.load(path.join(__dirname, '/intellij.yaml'))
     },
     {
         conditions: [
@@ -23,7 +23,7 @@ const templates = [
             },
             ...capsLayer.conditions
         ],
-        rule: YAML.load(path.join(__dirname, '/iterm.yaml'))
+        rule: Utils.load(path.join(__dirname, '/iterm.yaml'))
     }
 ]
 

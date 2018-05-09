@@ -1,3 +1,8 @@
+const YAML = require('yamljs')
+const path = require('path')
+const fs = require('fs')
+const Mustache = require('mustache')
+
 const merge = (conditionAndRules) => conditionAndRules.map(({
     conditions,
     rule
@@ -13,4 +18,11 @@ const merge = (conditionAndRules) => conditionAndRules.map(({
     })
 }))
 
-module.exports = { merge }
+const load = filename => YAML.load(filename)
+const loadWithValues = (filename, values) => {
+    const template = fs.readFileSync(filename, 'utf-8')
+    const rendered = Mustache.render(template, values)
+    return YAML.parse(rendered)
+}
+
+module.exports = { merge, load, loadWithValues }

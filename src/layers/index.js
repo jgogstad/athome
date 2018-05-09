@@ -1,11 +1,11 @@
-const YAML = require('yamljs')
 const path = require('path')
 const applicationLayers = require('./application_layers')
 const capsLayer = require('./caps_layer')
 const tabLayer = require('./tab_layer')
 const trainingWheels = require('./training_wheels')
+const Utils = require('../common/utils')
 
-const other = YAML.load(path.join(__dirname, '/other_modifications.yaml'))
+const other = Utils.load(path.join(__dirname, '/other_modifications.yaml'))
 
 module.exports = {
     "title": "At Home",

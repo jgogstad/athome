@@ -1,6 +1,5 @@
-const YAML = require('yamljs')
 const path = require('path')
-const utils = require('../../common/utils')
+const Utils = require('../../common/utils')
 
 const conditions = [{
     "type": "variable_if",
@@ -9,14 +8,15 @@ const conditions = [{
 }]
 
 const templates = [
-  { rule: YAML.load(path.join(__dirname, '/functional.yaml')) },
-  { rule: YAML.load(path.join(__dirname, '/window_management.yaml')) },
+  { rule: Utils.load(path.join(__dirname, '/functional.yaml')) },
+  { rule: Utils.load(path.join(__dirname, '/window_management.yaml')) },
+  { rule: Utils.load(path.join(__dirname, '/application_launchers.yaml')) },
 ]
 
-const definition = YAML.load(path.join(__dirname, '/layer_definition.yaml'))
+const definition = Utils.load(path.join(__dirname, '/layer_definition.yaml'))
 
 module.exports = {
     conditions,
     definition,
-    rules: utils.merge(templates.map(t => ({ ...t, conditions })))
+    rules: Utils.merge(templates.map(t => ({ ...t, conditions })))
 }
