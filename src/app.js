@@ -14,7 +14,11 @@ if (!fs.existsSync(target)) {
 } else {
   console.log(`Installing Karabiner complex modifications to '${target}/athome.json'...`)
   fs.writeFileSync(path.join(target, 'athome.json'), output)
-  console.log(`${chalk.green('Success:')} Please install module in Karabiner by clicking "Enable all" under the Complex Modifications settings`)
+  if (process.env.DEVELOPMENT) {
+    console.log(`${chalk.green('Success:')} Please install module in Karabiner by clicking "Enable all" under the Complex Modifications settings.`)
+  } else {
+    console.log(`${chalk.green('Success:')} Please install module in Karabiner manually from "Complex Modifications.`)
+  }
 }
 
 

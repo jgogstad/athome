@@ -7,6 +7,21 @@ const Utils = require('../common/utils')
 
 const other = Utils.load(path.join(__dirname, '/other_modifications.yaml'))
 
+const prioritizedOrder = [
+    other,
+    capsLayer.definition,
+    tabLayer.definition,
+    ...trainingWheels.rules,
+    ...applicationLayers.rules,
+    ...capsLayer.rules,
+    ...tabLayer.rules,
+]
+
+const rules = process.env.DEVELOPMENT ? prioritizedOrder : [{
+    description: 'AtHome',
+    manipulators: prioritizedOrder.map(rule => rule.manipulators).reduce((a,b) => a.concat(b), [])
+}]
+
 module.exports = {
     "title": "At Home",
     "author": "jgogstad",
@@ -14,13 +29,5 @@ module.exports = {
     "hostpage": "https://pqrs.org/osx/karabiner/complex_modifications/",
     "manual": "https://github.com/jgogstad/athome",
     "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/jgogstad/athome/master/foo.json",
-    "rules": [
-        other,
-        capsLayer.definition,
-        tabLayer.definition,
-        ...trainingWheels.rules,
-        ...applicationLayers.rules,
-        ...capsLayer.rules,
-        ...tabLayer.rules,
-    ]
+    "rules": rules
 }

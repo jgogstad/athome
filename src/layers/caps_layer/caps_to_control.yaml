@@ -65,3 +65,14 @@ manipulators:
       - key_code: tab
         modifiers:
           - left_control
+  - type: basic
+    description: Control Space
+    from:
+      key_code: spacebar
+      modifiers:
+        optional:
+          - any
+    to:
+      - key_code: spacebar
+        modifiers:
+          - left_control
