@@ -17,7 +17,9 @@ const prioritizedOrder = [
     ...tabLayer.rules,
 ]
 
-const rules = process.env.DEVELOPMENT ? prioritizedOrder : [{
+const debug = process.env.ENVIRONMENT == 'development'
+
+const rules = debug ? prioritizedOrder : [{
     description: 'AtHome',
     manipulators: prioritizedOrder.map(rule => rule.manipulators).reduce((a,b) => a.concat(b), [])
 }]
