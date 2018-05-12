@@ -2,6 +2,7 @@ const path = require('path')
 const utils = require('../../common/utils')
 const capsLayer = require('../caps_layer')
 const Utils = require('../../common/utils')
+const CharacterSets = require('../../common/character_sets')
 
 // To find the bundle identifier for your application, run
 // `mdls -name kMDItemCFBundleIdentifier /Applications/YourApp.app`
@@ -23,7 +24,7 @@ const templates = [
             },
             ...capsLayer.conditions
         ],
-        rule: Utils.load(path.join(__dirname, '/iterm.yaml'))
+        rule: Utils.loadWithValues(path.join(__dirname, '/iterm.yaml'), CharacterSets)
     }
 ]
 
