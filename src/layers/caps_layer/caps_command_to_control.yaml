@@ -1,0 +1,15 @@
+description: 'Caps-Layer: Caps to Control'
+manipulators:
+{{#latin_alphabet}}
+  - type: basic
+    description: Control+Command {{ key_code }}
+    from:
+      key_code: {{ key_code }}
+      modifiers:
+        mandatory:
+          - left_command
+    to:
+      - key_code: {{ key_code }}
+        modifiers:
+          - left_control
+{{/latin_alphabet}}
