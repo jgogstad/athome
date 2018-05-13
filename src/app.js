@@ -3,9 +3,9 @@ const os = require('os')
 const path = require('path')
 const chalk = require('chalk')
 const layers = require('./layers')
+const Env = require('./common/env')
 
 output = JSON.stringify(layers)
-
 target = path.join(os.homedir(), '.config/karabiner/assets/complex_modifications')
 
 if (!fs.existsSync(target)) {
@@ -14,7 +14,7 @@ if (!fs.existsSync(target)) {
 } else {
   console.log(`Installing Karabiner complex modifications to '${target}/athome.json'...`)
   fs.writeFileSync(path.join(target, 'athome.json'), output)
-  if (process.env.DEVELOPMENT) {
+  if (Env.development) {
     console.log(`${chalk.green('Success:')} Please install module in Karabiner by clicking "Enable all" under the Complex Modifications settings.`)
   } else {
     console.log(`${chalk.green('Success:')} Please install module in Karabiner manually from "Complex Modifications.`)

@@ -4,6 +4,7 @@ const capsLayer = require('./caps_layer')
 const tabLayer = require('./tab_layer')
 const trainingWheels = require('./training_wheels')
 const Utils = require('../common/utils')
+const Env = require('../common/env')
 
 const other = Utils.load(path.join(__dirname, '/other_modifications.yaml'))
 
@@ -17,9 +18,7 @@ const prioritizedOrder = [
     ...tabLayer.rules,
 ]
 
-const debug = process.env.ENVIRONMENT == 'development'
-
-const rules = debug ? prioritizedOrder : [{
+const rules = Env.development ? prioritizedOrder : [{
     description: 'AtHome',
     manipulators: prioritizedOrder.map(rule => rule.manipulators).reduce((a,b) => a.concat(b), [])
 }]
