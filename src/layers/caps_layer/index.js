@@ -9,7 +9,6 @@ const conditions = [{
 }]
 
 const templates = [
-    { rule: Utils.loadWithValues(path.join(__dirname, '/caps_command_to_control.yaml'), CharacterSets )},
     { rule: Utils.load(path.join(__dirname, '/navigation.yaml')) },
     { rule: Utils.load(path.join(__dirname, '/deletion.yaml')) },
     { rule: Utils.load(path.join(__dirname, '/internationalization/norway.yaml')) },

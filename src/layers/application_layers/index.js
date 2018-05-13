@@ -24,8 +24,8 @@ const templates = [
             },
             ...capsLayer.conditions
         ],
-        rule: Utils.load(path.join(__dirname, '/iterm.yaml'))
-    },
+        rule: Utils.loadWithValues(path.join(__dirname, '/iterm.yaml'), CharacterSets)
+    }
 ]
 
 module.exports = {
