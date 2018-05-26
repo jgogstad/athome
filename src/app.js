@@ -20,5 +20,3 @@ if (!fs.existsSync(target)) {
     console.log(`${chalk.green('Success:')} Please install module in Karabiner manually from "Complex Modifications.`)
   }
 }
-
-

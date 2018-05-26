@@ -20,7 +20,7 @@ const prioritizedOrder = [
 
 const rules = Env.development ? prioritizedOrder : [{
     description: 'AtHome',
-    manipulators: prioritizedOrder.map(rule => rule.manipulators).reduce((a,b) => a.concat(b), [])
+    manipulators: prioritizedOrder.map(rule => rule.manipulators).reduce((a, b) => a.concat(b), [])
 }]
 
 module.exports = {

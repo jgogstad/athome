@@ -2,6 +2,7 @@ const YAML = require('yamljs')
 const path = require('path')
 const fs = require('fs')
 const Mustache = require('mustache')
+const CharacterSets = require('./character_sets')
 
 const merge = (conditionAndRules) => conditionAndRules.map(({
     conditions,
@@ -18,11 +19,10 @@ const merge = (conditionAndRules) => conditionAndRules.map(({
     })
 }))
 
-const load = filename => YAML.load(filename)
-const loadWithValues = (filename, values) => {
+const load = (filename, values) => {
     const template = fs.readFileSync(filename, 'utf-8')
-    const rendered = Mustache.render(template, values)
+    const rendered = Mustache.render(template, values || CharacterSets)
     return YAML.parse(rendered)
 }
 
-module.exports = { merge, load, loadWithValues }
+module.exports = { merge, load }

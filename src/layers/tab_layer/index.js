@@ -8,9 +8,9 @@ const conditions = [{
 }]
 
 const templates = [
-  { rule: Utils.load(path.join(__dirname, '/functional.yaml')) },
-  { rule: Utils.load(path.join(__dirname, '/window_management.yaml')) },
-  { rule: Utils.load(path.join(__dirname, '/application_launchers.yaml')) },
+    { rule: Utils.load(path.join(__dirname, '/functional.yaml')) },
+    { rule: Utils.load(path.join(__dirname, '/window_management.yaml')) },
+    { rule: Utils.load(path.join(__dirname, '/application_launchers.yaml')) },
 ]
 
 const definition = Utils.load(path.join(__dirname, '/layer_definition.yaml'))

@@ -1,6 +1,5 @@
 const path = require('path')
 const Utils = require('../../common/utils')
-const CharacterSets = require('../../common/character_sets')
 
 const conditions = [{
     "type": "variable_if",
@@ -15,7 +14,7 @@ const templates = [
     { rule: Utils.load(path.join(__dirname, '/functional.yaml')) },
     { rule: Utils.load(path.join(__dirname, '/misc.yaml')) },
     { rule: Utils.load(path.join(__dirname, '/window_management.yaml')) },
-//    { rule: Utils.loadWithValues(path.join(__dirname, '/caps_to_control.yaml'), CharacterSets )},
+//    { rule: Utils.load(path.join(__dirname, '/caps_to_control.yaml')},
 ]
 
 const definition = Utils.load(path.join(__dirname, '/layer_definition.yaml'))
