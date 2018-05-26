@@ -1,23 +1,16 @@
 description: 'Application Layer: iTerm 2'
 manipulators:
   - type: basic
-    description: Replace PageUp with clear line
+    description: Caps-f to Esc-f (word jump)
     from:
-      key_code: u
+      key_code: f
     to:
-      - key_code: u
-        modifiers:
-          - left_control
-{{#latin_alphabet}}
+      - key_code: escape
+      - key_code: f
   - type: basic
-    description: Control-Command {{ key_code }}
+    description: Caps-b to Esc-b (word jump)
     from:
-      key_code: {{ key_code }}
-      modifiers:
-        mandatory:
-          - left_command
+      key_code: b
     to:
-      - key_code: {{ key_code }}
-        modifiers:
-          - left_control
-{{/latin_alphabet}}
+      - key_code: escape
+      - key_code: b
