@@ -4,5 +4,8 @@ manipulators:
     description: Right command to Left control
     from:
       key_code: right_command
+      modifiers:
+        optional:
+          - left_command
     to:
       - key_code: left_control
