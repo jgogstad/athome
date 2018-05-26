@@ -15,7 +15,7 @@ const templates = [
     { rule: Utils.load(path.join(__dirname, '/functional.yaml')) },
     { rule: Utils.load(path.join(__dirname, '/misc.yaml')) },
     { rule: Utils.load(path.join(__dirname, '/window_management.yaml')) },
-    { rule: Utils.loadWithValues(path.join(__dirname, '/caps_to_control.yaml'), CharacterSets )},
+//    { rule: Utils.loadWithValues(path.join(__dirname, '/caps_to_control.yaml'), CharacterSets )},
 ]
 
 const definition = Utils.load(path.join(__dirname, '/layer_definition.yaml'))

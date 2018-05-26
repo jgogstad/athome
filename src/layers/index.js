@@ -6,14 +6,14 @@ const trainingWheels = require('./training_wheels')
 const Utils = require('../common/utils')
 const Env = require('../common/env')
 
-const other = Utils.load(path.join(__dirname, '/other_modifications.yaml'))
+const global = Utils.load(path.join(__dirname, '/global_modifications.yaml'))
 
 const prioritizedOrder = [
-    other,
     capsLayer.definition,
     tabLayer.definition,
     ...trainingWheels.rules,
     ...applicationLayers.rules,
+    global,
     ...capsLayer.rules,
     ...tabLayer.rules,
 ]
