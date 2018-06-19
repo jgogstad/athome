@@ -6,23 +6,6 @@ manipulators:
       key_code: right_command
       modifiers:
         optional:
-          - left_command
+          - any
     to:
       - key_code: left_control
-  - type: basic
-    description: Colon to semicolon
-    from:
-      key_code: semicolon
-      modifiers:
-        mandatory:
-         - left_shift
-    to:
-      - key_code: semicolon
-  - type: basic
-    description: Semicolon to colon
-    from:
-      key_code: semicolon
-    to:
-      - key_code: semicolon
-        modifiers:
-          - left_shift
