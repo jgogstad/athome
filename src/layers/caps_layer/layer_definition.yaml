@@ -1,28 +1,6 @@
 description: 'Caps layer definition'
 manipulators:
   - type: basic
-    description: Disable escape behavior for iTerm
-    from:
-      key_code: caps_lock
-      modifiers:
-        optional:
-          - any
-    to:
-      - set_variable:
-          name: 'caps_lock pressed'
-          value: 1
-    to_after_key_up:
-      - set_variable:
-          name: 'caps_lock pressed'
-          value: 0
-    conditions: [
-      {
-        type: 'frontmost_application_if',
-        bundle_identifiers: ['^com.googlecode.iterm2.*']
-      }
-    ]
-  - type: basic
-    description: Caps layer definition
     from:
       key_code: caps_lock
       modifiers:
