@@ -36,21 +36,6 @@ manipulators:
         modifiers:
           - left_option
   - type: basic
-    description: Short parameter list (override Ctrl+P)
-    from:
-      key_code: p
-      modifiers:
-        optional:
-          - any
-    to:
-      - key_code: p
-        modifiers:
-          - left_control
-    conditions:
-      - type: variable_if
-        name: 'caps_lock pressed'
-        value: 1
-  - type: basic
     description: Organize imports
     from:
       key_code: o
