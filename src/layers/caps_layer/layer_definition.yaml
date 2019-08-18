@@ -2,7 +2,8 @@ description: 'Caps layer definition'
 manipulators:
   - type: basic
     from:
-      key_code: caps_lock
+      # key_code: caps_lock
+      key_code: left_control
       modifiers:
         optional:
           - any
