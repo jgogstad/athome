@@ -24,8 +24,6 @@ manipulators:
           - any
     to:
       - key_code: delete_or_backspace
-        modifiers:
-          - left_option
   - type: basic
     from:
       key_code: m

@@ -5,6 +5,7 @@ const tabLayer = require('./tab_layer')
 const trainingWheels = require('./training_wheels')
 const Utils = require('../common/utils')
 const Env = require('../common/env')
+const hhkb = require('./hhkb')
 
 const global = Utils.load(path.join(__dirname, '/global_modifications.yaml'))
 
@@ -16,6 +17,7 @@ const prioritizedOrder = [
     global,
     ...capsLayer.rules,
     ...tabLayer.rules,
+    ...hhkb.rules,
 ]
 
 const rules = Env.development ? prioritizedOrder : [{
